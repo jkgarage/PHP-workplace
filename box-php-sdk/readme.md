@@ -1,18 +1,17 @@
-The Box_Rest_Client is a simple way to access the Box.net ReST API 2.0 through PHP. 
-This API is developed based on the SDK for Box 1.0,
-initially provided here https://github.com/box/box-php-sdk , and written by
+The Box_Rest_Client is a simple way to access Box.net ReST API 2.0 through PHP.
+This API is developed based on the SDK for Box 1.0, initially provided here https://github.com/box/box-php-sdk , and written by
 https://github.com/AngeloR
 
 ## Dependencies
 SimpleXML is required during the authentication. 
+cURL is required for all the HTTP requests.
 
 - cURL: http://us3.php.net/manual/en/curl.installation.php 
 - SimpleXML: http://us3.php.net/manual/en/simplexml.installation.php
 
 
 ## How does it work?
-The `Box_Rest_Client` provides a standard way to execute various api methods from 
-the Box API 2.0 .
+`Box_Rest_Client` provides a standard way to execute various api methods from the Box API 2.0 .
 
 I try to provide the most common functions you likely use with Box API 2.0 .
 This work is continued to be updated, as of now it supports :
@@ -76,10 +75,9 @@ This work is continued to be updated, as of now it supports :
 	/* This function will rename the file specified to new name **/
 	public function rename_file ($file_id, $new_name)
 	/*************** [end region] FILES RELATED FUNCTIONS ***************************/
-}
 
-If you find yourself limited by the wrapper functions provided, feel free to invoke BOX API
-directly using the  generic get()/post() methods .
+
+If you find yourself limited by the wrapper functions provided, feel free to invoke BOX API 2.0 directly using the  generic get()/post() methods .
 
 For more details and some code examples, take a look at the sample.php file. 
 

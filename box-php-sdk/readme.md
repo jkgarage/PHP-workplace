@@ -3,12 +3,13 @@ This API is developed based on the SDK for Box 1.0, initially provided here http
 https://github.com/AngeloR
 
 ## Dependencies
-SimpleXML is required during the authentication. 
-cURL is required for all the HTTP requests.
+ SimpleXML is required during the authentication;
+ cURL is required for all the HTTP requests;
+ KLogger is optional, capture log message for trace/debug purpose.
 
-- cURL: http://us3.php.net/manual/en/curl.installation.php 
+- cURL: http://us3.php.net/manual/en/curl.installation.php<br> 
 - SimpleXML: http://us3.php.net/manual/en/simplexml.installation.php
-
+- KLogger : https://github.com/katzgrau/KLogger
 
 ## How does it work?
 `Box_Rest_Client` provides a standard way to execute various api methods from the Box API 2.0 .
@@ -74,6 +75,14 @@ This work is continued to be updated, as of now it supports :
 	
 	/* This function will rename the file specified to new name **/
 	public function rename_file ($file_id, $new_name)
+	
+	/* This function will upload a list of new file to the designated folder **/
+	/* If file already exists in the designated folder, error will be return **/
+	public function upload_new_file($folder_id, array $file_names)
+	
+	/*  This function will upload a newer version of a file **/
+	/* The file with id file_id should already exist in your Box account having the same file_name **/
+	public function upload_update_file($file_id, $file_name, $etag)
 	/*************** [end region] FILES RELATED FUNCTIONS ***************************/
 
 

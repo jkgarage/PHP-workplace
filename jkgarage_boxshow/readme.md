@@ -18,14 +18,12 @@ folder, and the slideshow will be refreshed
 - KLogger : https://github.com/katzgrau/KLogger
 
 ## Structure
-- BoxShowHome.php   : the homepage which 
-    1. set up connection with Box.net, 
-	2. render 'simpleSlideshow_index.html'
-    3. spawn a file download in back ground every interval (event triggered by ajax_photo_download.js)
-- config.php        : keep all configurations
-- photodownload.php : this page runs in background to download photo from Box.net to the buffer
-- ajax_photo_download.js : the magic ajax script, triggers an async refresh to BoxShowHome.php every 7(x) seconds
-     The refresh in turn triggers photodownload.php running in background
-- simpleSlideshow_index.html : page design, to play the slide show
+- `BoxShowHome.php`   : the homepage which 
+    1. sets up connection with Box.net, 
+	2. renders 'simpleSlideshow_index.html'
+    3. spawns a file download in back ground every interval (event triggered by `ajax_photo_download.js`)
+- `config.php`        : keep all configurations
+- `photodownload.php` : this page runs in background to download photo from Box.net to the buffer. The refresh in turn triggers `photodownload.php` running in background
+- `simpleSlideshow_index.html` : page design, to play the slide show
 
 For suggestion/feedback, please feel free to drop me a note.
